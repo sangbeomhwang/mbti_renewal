@@ -1,0 +1,742 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#wrap {
+  width: 100%;
+}
+
+#contents_wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#contents {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 1200px;
+  min-height: 1000px;
+}
+
+#contents > #question > ul > li {
+  border-bottom: 2px solid #dddfe2;
+  text-align: center;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+}
+
+#contents > #question > ul > li > p {
+  color: #576071;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.5;
+  padding: 30px 0 20px 0;
+  box-sizing: border-box;
+}
+
+#contents > #question > ul > li > #radioSelect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contents > #question > ul > li > #radioSelect > .agree {
+  color: #33a474;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#contents > #question > ul > li > #radioSelect > .disagree {
+  color: #88619a;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#contents > #question > ul > li > #radioSelect > #options {
+  display: flex;
+}
+
+#contents > #question > ul > li > #radioSelect > #options > div {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#contents > #question > ul > li > #radioSelect > #options > div > input {
+  cursor: pointer;
+  /* display: none; */
+}
+
+/*
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .high_agree
+  > input
+  + label {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border: 4px solid #33a474;
+  background-color: #fff;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .high_agree
+  > input
+  + label.on {
+  position: absolute;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  line-height: 150%;
+  background: #33a474;
+  transition: all 0.3s;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .half_agree
+  > input
+  + label {
+  position: relative;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #33a474;
+  color: #fff;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .half_agree
+  > input
+  + label.on {
+  position: absolute;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  line-height: 180%;
+  background: #33a474;
+  transition: all 0.3s;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .low_agree
+  > input
+  + label {
+  position: relative;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border: 4px solid #33a474;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .low_agree
+  > input
+  + label.on {
+  position: absolute;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  line-height: 180%;
+  background: #33a474;
+  transition: all 0.3s;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .neutral
+  > input
+  + label {
+  position: relative;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border: 4px solid #9b9faa;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .neutral
+  > input
+  + label.on {
+  position: absolute;
+  font-size: 10px;
+  color: #fff;
+  text-align: center;
+  line-height: 170%;
+  background: #9b9faa;
+  transition: all 0.3s;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .high_disagree
+  > input
+  + label {
+  position: relative;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border: 4px solid #88619a;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .high_disagree
+  > input
+  + label.on {
+  position: absolute;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  line-height: 150%;
+  background: #88619a;
+  transition: all 0.3s;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .half_disagree
+  > input
+  + label {
+  position: relative;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #88619a;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .half_disagree
+  > input
+  + .on {
+  position: absolute;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  line-height: 180%;
+  background: #88619a;
+  transition: all 0.3s;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .low_disagree
+  > input
+  + label {
+  position: relative;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border: 4px solid #88619a;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .low_disagree
+  > input
+  + .on {
+  position: absolute;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  line-height: 180%;
+  background: #88619a;
+  transition: all 0.3s;
+}
+*/
+
+/*
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .high_agree
+  > input
+  + label {
+  cursor: pointer;
+  content: "";
+  width: 50px;
+  height: 50px;
+  border: 4px solid #33a474;
+  background-color: #fff;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .high_agree
+  > input:checked
+  + label {
+  position: absolute;
+  font-size: 30px;
+  content: "✔️";
+  color: #fff;
+  text-align: center;
+  line-height: 150%;
+  background: #33a474;
+  transition: all 0.3s;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .half_agree
+  > input
+  + label {
+  position: relative;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #33a474;
+  color: #fff;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .half_agree
+  > input:checked
+  + label {
+  position: absolute;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  line-height: 180%;
+  background: #33a474;
+  transition: all 0.3s;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .low_agree
+  > input
+  + label {
+  position: relative;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border: 4px solid #33a474;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .low_agree
+  > input:checked
+  + label {
+  position: absolute;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  line-height: 180%;
+  background: #33a474;
+  transition: all 0.3s;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .neutral
+  > input
+  + label {
+  position: relative;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border: 4px solid #9b9faa;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .neutral
+  > input:checked
+  + label {
+  position: absolute;
+  font-size: 10px;
+  color: #fff;
+  text-align: center;
+  line-height: 170%;
+  background: #9b9faa;
+  transition: all 0.3s;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .high_disagree
+  > input
+  + label {
+  position: relative;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border: 4px solid #88619a;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .high_disagree
+  > input:checked
+  + label {
+  position: absolute;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  line-height: 150%;
+  background: #88619a;
+  transition: all 0.3s;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .half_disagree
+  > input
+  + label {
+  position: relative;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #88619a;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .half_disagree
+  > input:checked
+  + label {
+  position: absolute;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  line-height: 180%;
+  background: #88619a;
+  transition: all 0.3s;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .low_disagree
+  > input
+  + label {
+  position: relative;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border: 4px solid #88619a;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .low_disagree
+  > input:checked
+  + label {
+  position: absolute;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  line-height: 180%;
+  background: #88619a;
+  transition: all 0.3s;
+}
+*/
+
+#contents > #question > ul > li > #radioSelect > #options > .agree > input {
+  accent-color: #33a474;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .high_agree
+  > input {
+  width: 60px;
+  height: 60px;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .half_agree
+  > input {
+  width: 50px;
+  height: 50px;
+}
+
+#contents > #question > ul > li > #radioSelect > #options > .low_agree > input {
+  width: 40px;
+  height: 40px;
+}
+
+#contents > #question > ul > li > #radioSelect > #options > .neutral > input {
+  accent-color: #9b9faa;
+  width: 30px;
+  height: 30px;
+}
+
+#contents > #question > ul > li > #radioSelect > #options > .disagree > input {
+  accent-color: #88619a;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .high_disagree
+  > input {
+  width: 60px;
+  height: 60px;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .half_disagree
+  > input {
+  width: 50px;
+  height: 50px;
+}
+
+#contents
+  > #question
+  > ul
+  > li
+  > #radioSelect
+  > #options
+  > .low_disagree
+  > input {
+  width: 40px;
+  height: 40px;
+}
+
+#contents > #next_question {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 30px 0 50px 0;
+  box-sizing: border-box;
+  min-width: 900px;
+  border-bottom: 2px solid #dddfe2;
+}
+
+#contents > #next_question > button {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  min-width: 280px;
+  height: 80px;
+  line-height: 2;
+  padding: 19px 50px;
+  background-color: #88619a;
+  border-color: #88619a;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+#contents > #next_question > button > span > svg {
+  display: inline-block;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  line-height: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#footer_wrap {
+  width: 100%;
+}
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer > .footer__copyright {
+  font-size: 20px;
+  color: #abafb8;
+  margin: 50px 0 30px 0;
+}
+
+#footer > #footer_links > a {
+  font-size: 20px;
+  color: #4298b4;
+  margin: 0 15px;
+}
+
+#footer > .translation-alert {
+  margin: 30px 0 50px 0;
+  max-width: 1200px;
+  font-size: 16px;
+  text-align: center;
+  color: #7f7f7f;
+}
+
+#footer > .translation-alert > a {
+  color: #4298b4;
+}
