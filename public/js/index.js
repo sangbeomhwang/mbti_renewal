@@ -209,3 +209,14 @@ function checkedHandler() {
 
   nextBtn.addEventListener("click", saveHandler);
 }
+
+// 선택지 클릭시 아래로 scroll down
+const selectBtnAll = document.querySelectorAll("#radioSelect > #options > div > input") 
+
+for( let i = 0; i<selectBtnAll.length; i++){
+  selectBtnAll[i].addEventListener("click",function(){
+    setTimeout(function(){
+      window.scrollBy(0,180)
+    },500)
+  })
+}
