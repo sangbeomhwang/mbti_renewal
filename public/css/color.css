@@ -16,17 +16,13 @@ a {
   width: 100%;
 }
 
-
-
-
 /* header */
 #header {
   display: flex;
-  position : relative;
+  position: relative;
   justify-content: space-between;
   align-items: center;
   padding: 0 30px;
-
 }
 
 #header > ul {
@@ -36,19 +32,16 @@ a {
 
 #header > ul > li {
   padding: 0 30px;
-
 }
 
 #header > ul > li > a {
-
   height: 100%;
 }
-
 
 /* visual */
 #visual {
   background: skyblue;
-  padding : 25px 0px;
+  padding: 25px 0px;
   position: relative;
 }
 
@@ -59,7 +52,7 @@ a {
 #visual_wrap > #visual > h1 {
   margin: 35px 0px 15px;
   text-align: center;
-  color : #fff;
+  color: #fff;
   font-size: 4.1em;
 }
 #mark {
@@ -70,14 +63,12 @@ a {
 
 #notice {
   display: flex;
-  justify-content : center;
-  
+  justify-content: center;
 }
 
-
-#notice > .tip{
-  padding : 20px 0px;
-  margin : 80px 10px 0px;
+#notice > .tip {
+  padding: 20px 0px;
+  margin: 80px 10px 0px;
   width: 350px;
   align-items: center;
   border-radius: 10px;
@@ -86,19 +77,15 @@ a {
   font-size: 1.2em;
 }
 
-
 .tip > img {
-  width:90px;
+  width: 90px;
   height: 90px;
   margin-bottom: 30px;
 }
 
-
-
 .tip > .title {
   display: block;
 }
-
 
 #contents_wrap {
   display: flex;
@@ -765,7 +752,7 @@ a {
   border-bottom: 2px solid #dddfe2;
 }
 
-#contents > #next_question > button {
+#contents > #next_question > a > button {
   font-size: 20px;
   font-weight: bold;
   color: #fff;
@@ -779,7 +766,42 @@ a {
   cursor: pointer;
 }
 
-#contents > #next_question > button > span > svg {
+#contents > #next_question > a > button > span > svg {
+  display: inline-block;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  line-height: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#contents > #last_question {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 30px 0 50px 0;
+  box-sizing: border-box;
+  min-width: 900px;
+  border-bottom: 2px solid #dddfe2;
+}
+
+#contents > #last_question > button {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  min-width: 280px;
+  height: 80px;
+  line-height: 2;
+  padding: 19px 50px;
+  background-color: #88619a;
+  border-color: #88619a;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+#contents > #last_question > button > span > svg {
   display: inline-block;
   font-weight: bold;
   width: 20px;

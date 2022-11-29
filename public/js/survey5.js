@@ -169,33 +169,33 @@ function checkedHandler() {
 
     if (totalSurvey > 354) {
       location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[0]}`;
-    } else if (totalSurvey > 331) {
+    } else if (totalSurvey > 334) {
       location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[1]}`;
-    } else if (totalSurvey > 308) {
+    } else if (totalSurvey > 314) {
       location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[2]}`;
-    } else if (totalSurvey > 285) {
+    } else if (totalSurvey > 294) {
       location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[3]}`;
-    } else if (totalSurvey > 262) {
+    } else if (totalSurvey > 274) {
       location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[4]}`;
-    } else if (totalSurvey > 239) {
+    } else if (totalSurvey > 254) {
       location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[5]}`;
-    } else if (totalSurvey > 216) {
+    } else if (totalSurvey > 234) {
       location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[6]}`;
-    } else if (totalSurvey > 193) {
+    } else if (totalSurvey > 214) {
       location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[7]}`;
-    } else if (totalSurvey > 170) {
+    } else if (totalSurvey > 194) {
       location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[8]}`;
-    } else if (totalSurvey > 147) {
+    } else if (totalSurvey > 174) {
       location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[9]}`;
-    } else if (totalSurvey > 124) {
+    } else if (totalSurvey > 154) {
       location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[10]}`;
-    } else if (totalSurvey > 101) {
+    } else if (totalSurvey > 134) {
       location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[11]}`;
-    } else if (totalSurvey > 78) {
+    } else if (totalSurvey > 114) {
       location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[12]}`;
-    } else if (totalSurvey > 55) {
+    } else if (totalSurvey > 85) {
       location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[13]}`;
-    } else if (totalSurvey > 32) {
+    } else if (totalSurvey > 64) {
       location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[14]}`;
     } else {
       location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[15]}`;
