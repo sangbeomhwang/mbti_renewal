@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/css/color.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header 영역 -->
+      <div id="header_wrap">
+        <div id="header">
+          <h1>
+            <a href="https://www.16personalities.com/ko">
+              <img
+                src="https://static.neris-assets.com/images/system/logo.svg"
+                alt="site_logo"
+              />
+            </a>
+          </h1>
+          <ul>
+            <li>
+              <a
+                href="https://www.16personalities.com/ko/%EB%AC%B4%EB%A3%8C-%EC%84%B1%EA%B2%A9-%EC%9C%A0%ED%98%95-%EA%B2%80%EC%82%AC"
+              >
+                <span>성격 유형 검사</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9-%EC%9C%A0%ED%98%95"
+              >
+                <span>성격 유형</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.16personalities.com/ko/%EC%97%B0%EB%9D%BD%EC%B2%98"
+              >
+                <span>연락처</span>
+              </a>
+            </li>
+          </ul>
+          <a href="">
+            <span>
+              <img
+                src="https://static.neris-assets.com/images/international/flags/kr.svg"
+                alt="태극기"
+              />
+            </span>
+            <span>한국어</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- visual 영역 -->
+      <div id="visual_wrap">
+        <div id="visual">
+          <h1>무료 성격유형검사</h1>
+          <div id="mark">
+            NERIS Type Explorer
+            <sup>®</sup>
+          </div>
+          <div id="notice">
+            <div class="tip">
+              <img
+                src="https://static.neris-assets.com/images/test-header-1.svg"
+                alt="time_notice"
+              />
+              <div class="text">
+                <div class="title">총 검사 시간은 12분 내외입니다.</div>
+              </div>
+            </div>
+            <div class="tip">
+              <img
+                src="https://static.neris-assets.com/images/test-header-2.svg"
+                alt="answer_notice"
+              />
+              <div class="text">
+                <div class="title">
+                  혹 질문이 마음에 들지 않더라도 정직하게 답변하십시오.
+                </div>
+              </div>
+            </div>
+            <div class="tip">
+              <img
+                src="https://static.neris-assets.com/images/test-header-3.svg"
+                alt="select_notice"
+              />
+              <div class="text">
+                <div class="title">
+                  가능하면 답변 시 '중립'을 선택하지 마십시오.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- a태그를 통한 사이트 특정 위치 앵커작업 -->
+      <a name="nextButton"></a>
+
+      <!-- contents 영역 -->
+      <div id="contents_wrap">
+        <div id="contents">
+          <div id="question">
+            <ul id="statement">
+              <li class="q1">
+                <p>친구에게 먼저 만나자고 연락하는 편이다.</p>
+                <div id="radioSelect">
+                  <div class="agree">동의</div>
+                  <div id="options">
+                    <div class="agree high_agree">
+                      <input
+                        type="radio"
+                        name="survey1"
+                        id="sel1-1"
+                        value="7"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel1-1">✔️</label> -->
+                    </div>
+                    <div class="agree half_agree">
+                      <input
+                        type="radio"
+                        name="survey1"
+                        id="sel1-2"
+                        value="6"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel1-2">✔️</label> -->
+                    </div>
+                    <div class="agree low_agree">
+                      <input
+                        type="radio"
+                        name="survey1"
+                        id="sel1-3"
+                        value="5"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel1-3">✔️</label> -->
+                    </div>
+                    <div class="neutral">
+                      <input
+                        type="radio"
+                        name="survey1"
+                        id="sel1-4"
+                        value="4"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel1-4">✔️</label> -->
+                    </div>
+                    <div class="disagree low_disagree">
+                      <input
+                        type="radio"
+                        name="survey1"
+                        id="sel1-5"
+                        value="3"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel1-5">✔️</label> -->
+                    </div>
+                    <div class="disagree half_disagree">
+                      <input
+                        type="radio"
+                        name="survey1"
+                        id="sel1-6"
+                        value="2"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel1-6">✔️</label> -->
+                    </div>
+                    <div class="disagree high_disagree">
+                      <input
+                        type="radio"
+                        name="survey1"
+                        id="sel1-7"
+                        value="1"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel1-7">✔️</label> -->
+                    </div>
+                  </div>
+                  <div class="disagree">비동의</div>
+                </div>
+              </li>
+              <li class="q2">
+                <p>
+                  계획에 차질이 생기면 최대한 빨리 계획으로 돌아가기 위해
+                  노력한다.
+                </p>
+                <div id="radioSelect">
+                  <div class="agree">동의</div>
+                  <div id="options">
+                    <div class="agree high_agree">
+                      <input
+                        type="radio"
+                        name="survey2"
+                        id="sel2-1"
+                        value="7"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel2-1">✔️</label> -->
+                    </div>
+                    <div class="agree half_agree">
+                      <input
+                        type="radio"
+                        name="survey2"
+                        id="sel2-2"
+                        value="6"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel2-2">✔️</label> -->
+                    </div>
+                    <div class="agree low_agree">
+                      <input
+                        type="radio"
+                        name="survey2"
+                        id="sel2-3"
+                        value="5"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel2-3">✔️</label> -->
+                    </div>
+                    <div class="neutral">
+                      <input
+                        type="radio"
+                        name="survey2"
+                        id="sel2-4"
+                        value="4"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel2-4">✔️</label> -->
+                    </div>
+                    <div class="disagree low_disagree">
+                      <input
+                        type="radio"
+                        name="survey2"
+                        id="sel2-5"
+                        value="3"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel2-5">✔️</label> -->
+                    </div>
+                    <div class="disagree half_disagree">
+                      <input
+                        type="radio"
+                        name="survey2"
+                        id="sel2-6"
+                        value="2"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel2-6">✔️</label> -->
+                    </div>
+                    <div class="disagree high_disagree">
+                      <input
+                        type="radio"
+                        name="survey2"
+                        id="sel2-7"
+                        value="1"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel2-7">✔️</label> -->
+                    </div>
+                  </div>
+                  <div class="disagree">비동의</div>
+                </div>
+              </li>
+              <li class="q3">
+                <p>오래 전의 실수를 후회할 때가 많다.</p>
+                <div id="radioSelect">
+                  <div class="agree">동의</div>
+                  <div id="options">
+                    <div class="agree high_agree">
+                      <input
+                        type="radio"
+                        name="survey3"
+                        id="sel3-1"
+                        value="7"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel3-1">✔️</label> -->
+                    </div>
+                    <div class="agree half_agree">
+                      <input
+                        type="radio"
+                        name="survey3"
+                        id="sel3-2"
+                        value="6"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel3-2">✔️</label> -->
+                    </div>
+                    <div class="agree low_agree">
+                      <input
+                        type="radio"
+                        name="survey3"
+                        id="sel3-3"
+                        value="5"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel3-3">✔️</label> -->
+                    </div>
+                    <div class="neutral">
+                      <input
+                        type="radio"
+                        name="survey3"
+                        id="sel3-4"
+                        value="4"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel3-4">✔️</label> -->
+                    </div>
+                    <div class="disagree low_disagree">
+                      <input
+                        type="radio"
+                        name="survey3"
+                        id="sel3-5"
+                        value="3"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel3-5">✔️</label> -->
+                    </div>
+                    <div class="disagree half_disagree">
+                      <input
+                        type="radio"
+                        name="survey3"
+                        id="sel3-6"
+                        value="2"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel3-6">✔️</label> -->
+                    </div>
+                    <div class="disagree high_disagree">
+                      <input
+                        type="radio"
+                        name="survey3"
+                        id="sel3-7"
+                        value="1"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel3-7">✔️</label> -->
+                    </div>
+                  </div>
+                  <div class="disagree">비동의</div>
+                </div>
+              </li>
+              <li class="q4">
+                <p>인간의 존재와 삶의 이유에 대해 깊이 생각하지 않는 편이다.</p>
+                <div id="radioSelect">
+                  <div class="agree">동의</div>
+                  <div id="options">
+                    <div class="agree high_agree">
+                      <input
+                        type="radio"
+                        name="survey4"
+                        id="sel4-1"
+                        value="7"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel4-1">✔️</label> -->
+                    </div>
+                    <div class="agree half_agree">
+                      <input
+                        type="radio"
+                        name="survey4"
+                        id="sel4-2"
+                        value="6"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel4-2">✔️</label> -->
+                    </div>
+                    <div class="agree low_agree">
+                      <input
+                        type="radio"
+                        name="survey4"
+                        id="sel4-3"
+                        value="5"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel4-3">✔️</label> -->
+                    </div>
+                    <div class="neutral">
+                      <input
+                        type="radio"
+                        name="survey4"
+                        id="sel4-4"
+                        value="4"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel4-4">✔️</label> -->
+                    </div>
+                    <div class="disagree low_disagree">
+                      <input
+                        type="radio"
+                        name="survey4"
+                        id="sel4-5"
+                        value="3"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel4-5">✔️</label> -->
+                    </div>
+                    <div class="disagree half_disagree">
+                      <input
+                        type="radio"
+                        name="survey4"
+                        id="sel4-6"
+                        value="2"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel4-6">✔️</label> -->
+                    </div>
+                    <div class="disagree high_disagree">
+                      <input
+                        type="radio"
+                        name="survey4"
+                        id="sel4-7"
+                        value="1"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel4-7">✔️</label> -->
+                    </div>
+                  </div>
+                  <div class="disagree">비동의</div>
+                </div>
+              </li>
+              <li class="q5">
+                <p>감정을 조절하기 보다는 감정에 휘둘리는 편이다.</p>
+                <div id="radioSelect">
+                  <div class="agree">동의</div>
+                  <div id="options">
+                    <div class="agree high_agree">
+                      <input
+                        type="radio"
+                        name="survey5"
+                        id="sel5-1"
+                        value="7"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel5-1">✔️</label> -->
+                    </div>
+                    <div class="agree half_agree">
+                      <input
+                        type="radio"
+                        name="survey5"
+                        id="sel5-2"
+                        value="6"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel5-2">✔️</label> -->
+                    </div>
+                    <div class="agree low_agree">
+                      <input
+                        type="radio"
+                        name="survey5"
+                        id="sel5-3"
+                        value="5"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel5-3">✔️</label> -->
+                    </div>
+                    <div class="neutral">
+                      <input
+                        type="radio"
+                        name="survey5"
+                        id="sel5-4"
+                        value="4"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel5-4">✔️</label> -->
+                    </div>
+                    <div class="disagree low_disagree">
+                      <input
+                        type="radio"
+                        name="survey5"
+                        id="sel5-5"
+                        value="3"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel5-5">✔️</label> -->
+                    </div>
+                    <div class="disagree half_disagree">
+                      <input
+                        type="radio"
+                        name="survey5"
+                        id="sel5-6"
+                        value="2"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel5-6">✔️</label> -->
+                    </div>
+                    <div class="disagree high_disagree">
+                      <input
+                        type="radio"
+                        name="survey5"
+                        id="sel5-7"
+                        value="1"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel5-7">✔️</label> -->
+                    </div>
+                  </div>
+                  <div class="disagree">비동의</div>
+                </div>
+              </li>
+              <li class="q6">
+                <p>
+                  상대방의 잘못이라는 것이 명백할 때도 상대방의 체면을 살려주기
+                  위해 노력한다.
+                </p>
+                <div id="radioSelect">
+                  <div class="agree">동의</div>
+                  <div id="options">
+                    <div class="agree high_agree">
+                      <input
+                        type="radio"
+                        name="survey6"
+                        id="sel6-1"
+                        value="7"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel6-1">✔️</label> -->
+                    </div>
+                    <div class="agree half_agree">
+                      <input
+                        type="radio"
+                        name="survey6"
+                        id="sel6-2"
+                        value="6"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel6-2">✔️</label> -->
+                    </div>
+                    <div class="agree low_agree">
+                      <input
+                        type="radio"
+                        name="survey6"
+                        id="sel6-3"
+                        value="5"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel6-3">✔️</label> -->
+                    </div>
+                    <div class="neutral">
+                      <input
+                        type="radio"
+                        name="survey6"
+                        id="sel6-4"
+                        value="4"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel6-4">✔️</label> -->
+                    </div>
+                    <div class="disagree low_disagree">
+                      <input
+                        type="radio"
+                        name="survey6"
+                        id="sel6-5"
+                        value="3"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel6-5">✔️</label> -->
+                    </div>
+                    <div class="disagree half_disagree">
+                      <input
+                        type="radio"
+                        name="survey6"
+                        id="sel6-6"
+                        value="2"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel6-6">✔️</label> -->
+                    </div>
+                    <div class="disagree high_disagree">
+                      <input
+                        type="radio"
+                        name="survey6"
+                        id="sel6-7"
+                        value="1"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel6-7">✔️</label> -->
+                    </div>
+                  </div>
+                  <div class="disagree">비동의</div>
+                </div>
+              </li>
+              <li class="q7">
+                <p>
+                  계획에 따라 일관성 있게 업무를 진행하기 보다는 즉흥적인
+                  에너지로 업무를 몰아서 처리하는 편이다.
+                </p>
+                <div id="radioSelect">
+                  <div class="agree">동의</div>
+                  <div id="options">
+                    <div class="agree high_agree">
+                      <input
+                        type="radio"
+                        name="survey7"
+                        id="sel7-1"
+                        value="7"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel7-1">✔️</label> -->
+                    </div>
+                    <div class="agree half_agree">
+                      <input
+                        type="radio"
+                        name="survey7"
+                        id="sel7-2"
+                        value="6"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel7-2">✔️</label> -->
+                    </div>
+                    <div class="agree low_agree">
+                      <input
+                        type="radio"
+                        name="survey7"
+                        id="sel7-3"
+                        value="5"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel7-3">✔️</label> -->
+                    </div>
+                    <div class="neutral">
+                      <input
+                        type="radio"
+                        name="survey7"
+                        id="sel7-4"
+                        value="4"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel7-4">✔️</label> -->
+                    </div>
+                    <div class="disagree low_disagree">
+                      <input
+                        type="radio"
+                        name="survey7"
+                        id="sel7-5"
+                        value="3"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel7-5">✔️</label> -->
+                    </div>
+                    <div class="disagree half_disagree">
+                      <input
+                        type="radio"
+                        name="survey7"
+                        id="sel7-6"
+                        value="2"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel7-6">✔️</label> -->
+                    </div>
+                    <div class="disagree high_disagree">
+                      <input
+                        type="radio"
+                        name="survey7"
+                        id="sel7-7"
+                        value="1"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel7-7">✔️</label> -->
+                    </div>
+                  </div>
+                  <div class="disagree">비동의</div>
+                </div>
+              </li>
+              <li class="q8">
+                <p>
+                  상대방이 자신을 높게 평가하면 나중에 상대방이 실망하게 될까
+                  걱정하곤 한다.
+                </p>
+                <div id="radioSelect">
+                  <div class="agree">동의</div>
+                  <div id="options">
+                    <div class="agree high_agree">
+                      <input
+                        type="radio"
+                        name="survey8"
+                        id="sel8-1"
+                        value="7"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel8-1">✔️</label> -->
+                    </div>
+                    <div class="agree half_agree">
+                      <input
+                        type="radio"
+                        name="survey8"
+                        id="sel8-2"
+                        value="6"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel8-2">✔️</label> -->
+                    </div>
+                    <div class="agree low_agree">
+                      <input
+                        type="radio"
+                        name="survey8"
+                        id="sel8-3"
+                        value="5"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel8-3">✔️</label> -->
+                    </div>
+                    <div class="neutral">
+                      <input
+                        type="radio"
+                        name="survey8"
+                        id="sel8-4"
+                        value="4"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel8-4">✔️</label> -->
+                    </div>
+                    <div class="disagree low_disagree">
+                      <input
+                        type="radio"
+                        name="survey8"
+                        id="sel8-5"
+                        value="3"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel8-5">✔️</label> -->
+                    </div>
+                    <div class="disagree half_disagree">
+                      <input
+                        type="radio"
+                        name="survey8"
+                        id="sel8-6"
+                        value="2"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel8-6">✔️</label> -->
+                    </div>
+                    <div class="disagree high_disagree">
+                      <input
+                        type="radio"
+                        name="survey8"
+                        id="sel8-7"
+                        value="1"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel8-7">✔️</label> -->
+                    </div>
+                  </div>
+                  <div class="disagree">비동의</div>
+                </div>
+              </li>
+              <li class="q9">
+                <p>대부분의 시간을 혼자서 일할 수 있는 직업을 원한다.</p>
+                <div id="radioSelect">
+                  <div class="agree">동의</div>
+                  <div id="options">
+                    <div class="agree high_agree">
+                      <input
+                        type="radio"
+                        name="survey9"
+                        id="sel9-1"
+                        value="7"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel9-1">✔️</label> -->
+                    </div>
+                    <div class="agree half_agree">
+                      <input
+                        type="radio"
+                        name="survey9"
+                        id="sel9-2"
+                        value="6"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel9-2">✔️</label> -->
+                    </div>
+                    <div class="agree low_agree">
+                      <input
+                        type="radio"
+                        name="survey9"
+                        id="sel9-3"
+                        value="5"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel9-3">✔️</label> -->
+                    </div>
+                    <div class="neutral">
+                      <input
+                        type="radio"
+                        name="survey9"
+                        id="sel9-4"
+                        value="4"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel9-4">✔️</label> -->
+                    </div>
+                    <div class="disagree low_disagree">
+                      <input
+                        type="radio"
+                        name="survey9"
+                        id="sel9-5"
+                        value="3"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel9-5">✔️</label> -->
+                    </div>
+                    <div class="disagree half_disagree">
+                      <input
+                        type="radio"
+                        name="survey9"
+                        id="sel9-6"
+                        value="2"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel9-6">✔️</label> -->
+                    </div>
+                    <div class="disagree high_disagree">
+                      <input
+                        type="radio"
+                        name="survey9"
+                        id="sel9-7"
+                        value="1"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel9-7">✔️</label> -->
+                    </div>
+                  </div>
+                  <div class="disagree">비동의</div>
+                </div>
+              </li>
+              <li class="q10">
+                <p>
+                  철학적인 질문에 대해 깊게 생각하는 일은 시간 낭비라고
+                  생각한다.
+                </p>
+                <div id="radioSelect">
+                  <div class="agree">동의</div>
+                  <div id="options">
+                    <div class="agree high_agree">
+                      <input
+                        type="radio"
+                        name="survey10"
+                        id="sel10-1"
+                        value="7"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel10-1">✔️</label> -->
+                    </div>
+                    <div class="agree half_agree">
+                      <input
+                        type="radio"
+                        name="survey10"
+                        id="sel10-2"
+                        value="6"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel10-2">✔️</label> -->
+                    </div>
+                    <div class="agree low_agree">
+                      <input
+                        type="radio"
+                        name="survey10"
+                        id="sel10-3"
+                        value="5"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel10-3">✔️</label> -->
+                    </div>
+                    <div class="neutral">
+                      <input
+                        type="radio"
+                        name="survey10"
+                        id="sel10-4"
+                        value="4"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel10-4">✔️</label> -->
+                    </div>
+                    <div class="disagree low_disagree">
+                      <input
+                        type="radio"
+                        name="survey10"
+                        id="sel10-5"
+                        value="3"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel10-5">✔️</label> -->
+                    </div>
+                    <div class="disagree half_disagree">
+                      <input
+                        type="radio"
+                        name="survey10"
+                        id="sel10-6"
+                        value="2"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel10-6">✔️</label> -->
+                    </div>
+                    <div class="disagree high_disagree">
+                      <input
+                        type="radio"
+                        name="survey10"
+                        id="sel10-7"
+                        value="1"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel10-7">✔️</label> -->
+                    </div>
+                  </div>
+                  <div class="disagree">비동의</div>
+                </div>
+              </li>
+              <li class="q11">
+                <p>
+                  조용하고 사적인 장소보다는 사람들로 붐비고 떠들썩한 장소를
+                  좋아한다.
+                </p>
+                <div id="radioSelect">
+                  <div class="agree">동의</div>
+                  <div id="options">
+                    <div class="agree high_agree">
+                      <input
+                        type="radio"
+                        name="survey11"
+                        id="sel11-1"
+                        value="7"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel11-1">✔️</label> -->
+                    </div>
+                    <div class="agree half_agree">
+                      <input
+                        type="radio"
+                        name="survey11"
+                        id="sel11-2"
+                        value="6"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel11-2">✔️</label> -->
+                    </div>
+                    <div class="agree low_agree">
+                      <input
+                        type="radio"
+                        name="survey11"
+                        id="sel11-3"
+                        value="5"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel11-3">✔️</label> -->
+                    </div>
+                    <div class="neutral">
+                      <input
+                        type="radio"
+                        name="survey11"
+                        id="sel11-4"
+                        value="4"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel11-4">✔️</label> -->
+                    </div>
+                    <div class="disagree low_disagree">
+                      <input
+                        type="radio"
+                        name="survey11"
+                        id="sel11-5"
+                        value="3"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel11-5">✔️</label> -->
+                    </div>
+                    <div class="disagree half_disagree">
+                      <input
+                        type="radio"
+                        name="survey11"
+                        id="sel11-6"
+                        value="2"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel11-6">✔️</label> -->
+                    </div>
+                    <div class="disagree high_disagree">
+                      <input
+                        type="radio"
+                        name="survey11"
+                        id="sel11-7"
+                        value="1"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel11-7">✔️</label> -->
+                    </div>
+                  </div>
+                  <div class="disagree">비동의</div>
+                </div>
+              </li>
+              <li class="q12">
+                <p>상대방의 감정을 바로 알아차릴 수 있다.</p>
+                <div id="radioSelect">
+                  <div class="agree">동의</div>
+                  <div id="options">
+                    <div class="agree high_agree">
+                      <input
+                        type="radio"
+                        name="survey12"
+                        id="sel12-1"
+                        value="7"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel12-1">✔️</label> -->
+                    </div>
+                    <div class="agree half_agree">
+                      <input
+                        type="radio"
+                        name="survey12"
+                        id="sel12-2"
+                        value="6"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel12-2">✔️</label> -->
+                    </div>
+                    <div class="agree low_agree">
+                      <input
+                        type="radio"
+                        name="survey12"
+                        id="sel12-3"
+                        value="5"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel12-3">✔️</label> -->
+                    </div>
+                    <div class="neutral">
+                      <input
+                        type="radio"
+                        name="survey12"
+                        id="sel12-4"
+                        value="4"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel12-4">✔️</label> -->
+                    </div>
+                    <div class="disagree low_disagree">
+                      <input
+                        type="radio"
+                        name="survey12"
+                        id="sel12-5"
+                        value="3"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel12-5">✔️</label> -->
+                    </div>
+                    <div class="disagree half_disagree">
+                      <input
+                        type="radio"
+                        name="survey12"
+                        id="sel12-6"
+                        value="2"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel12-6">✔️</label> -->
+                    </div>
+                    <div class="disagree high_disagree">
+                      <input
+                        type="radio"
+                        name="survey12"
+                        id="sel12-7"
+                        value="1"
+                        onclick="checkedHandler(event)"
+                      />
+                      <!-- <label for="sel12-7">✔️</label> -->
+                    </div>
+                  </div>
+                  <div class="disagree">비동의</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="next_question">
+            <a href="/mbti/survey5.html#nextButton">
+              <button class="nextBtn">
+                <span>다음</span>
+                <span class="arrow">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                    viewBox="0 0 48 48"
+                    aria-labelledby="next_arrow"
+                  >
+                    <title id="next_arrow">다음</title>
+                    <path
+                      data-v-339f1828=""
+                      d="M23.446875,3.571875 L21.590625,5.428125 C21.15,5.86875 21.15,6.58125 21.590625,7.021875 L36.13125,21.5625 L4.125,21.5625 C3.50625,21.5625 3,22.06875 3,22.6875 L3,25.3125 C3,25.93125 3.50625,26.4375 4.125,26.4375 L36.13125,26.4375 L21.590625,40.978125 C21.15,41.41875 21.15,42.13125 21.590625,42.571875 L23.446875,44.428125 C23.8875,44.86875 24.6,44.86875 25.040625,44.428125 L44.671875,24.796875 C45.1125,24.35625 45.1125,23.64375 44.671875,23.203125 L25.040625,3.571875 C24.6,3.13125 23.8875,3.13125 23.446875,3.571875 Z"
+                    ></path>
+                  </svg>
+                </span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer 영역 -->
+      <div id="footer_wrap">
+        <div id="footer">
+          <div class="footer__copyright">
+            ©2011-2022 NERIS Analytics Limited
+          </div>
+          <div id="footer_links">
+            <a
+              href="https://www.16personalities.com/contact-us"
+              class="link--inline"
+              >Contact</a
+            >
+            <a
+              href="https://www.16personalities.com/orders/testimonials"
+              class="link--inline hide--checkout"
+              >Testimonials</a
+            >
+            <a href="https://www.16personalities.com/terms" class="link--inline"
+              >Terms & Conditions</a
+            >
+            <a
+              href="https://www.16personalities.com/terms/privacy"
+              class="link--inline last--checkout"
+              >Privacy Policy</a
+            >
+            <a
+              href="https://www.16personalities.com/tools/teams"
+              class="link--inline hide--checkout"
+              >For Teams</a
+            >
+          </div>
+          <!-- <div id="footer_sns">
+            <a
+              href="https://www.facebook.com/16Personalities/"
+              class="sns_icon"
+              target="_blank"
+              rel="noreferrer"
+              ><span class="sns_icon"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  role="img"
+                  viewBox="0 0 48 48"
+                  aria-labelledby="fb"
+                >
+                  <title id="fb">Facebook</title>
+                  <path
+                    d="M47.25 24C47.25 11.156 36.844.75 24 .75S.75 11.156.75 24c0 11.604 8.502 21.223 19.617 22.969V30.72h-5.906V24h5.906v-5.122c0-5.827 3.469-9.046 8.782-9.046 2.544 0 5.205.454 5.205.454v5.719H31.42c-2.887 0-3.788 1.793-3.788 3.63V24h6.448l-1.031 6.72h-5.417V46.97C38.748 45.223 47.25 35.604 47.25 24z"
+                  ></path></svg></span
+            ></a>
+            <a
+              href="https://www.instagram.com/16Personalitiesofficial/"
+              class="sns_icon"
+              target="_blank"
+              rel="noreferrer"
+              ><span class="sns_icon"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  role="img"
+                  viewBox="0 0 48 48"
+                  aria-labelledby="is"
+                >
+                  <title id="is">Instagram</title>
+                  <path
+                    d="M24.009375,13.21875 C18.046875,13.21875 13.2375,18.028125 13.2375,23.990625 C13.2375,29.953125 18.046875,34.7625 24.009375,34.7625 C29.971875,34.7625 34.78125,29.953125 34.78125,23.990625 C34.78125,18.028125 29.971875,13.21875 24.009375,13.21875 Z M24.009375,30.99375 C20.15625,30.99375 17.00625,27.853125 17.00625,23.990625 C17.00625,20.128125 20.146875,16.9875 24.009375,16.9875 C27.871875,16.9875 31.0125,20.128125 31.0125,23.990625 C31.0125,27.853125 27.8625,30.99375 24.009375,30.99375 L24.009375,30.99375 Z M37.734375,12.778125 C37.734375,14.175 36.609375,15.290625 35.221875,15.290625 C33.825,15.290625 32.709375,14.165625 32.709375,12.778125 C32.709375,11.390625 33.834375,10.265625 35.221875,10.265625 C36.609375,10.265625 37.734375,11.390625 37.734375,12.778125 Z M44.86875,15.328125 C44.709375,11.9625 43.940625,8.98125 41.475,6.525 C39.01875,4.06875 36.0375,3.3 32.671875,3.13125 C29.203125,2.934375 18.80625,2.934375 15.3375,3.13125 C11.98125,3.290625 9,4.059375 6.534375,6.515625 C4.06875,8.971875 3.309375,11.953125 3.140625,15.31875 C2.94375,18.7875 2.94375,29.184375 3.140625,32.653125 C3.3,36.01875 4.06875,39 6.534375,41.45625 C9,43.9125 11.971875,44.68125 15.3375,44.85 C18.80625,45.046875 29.203125,45.046875 32.671875,44.85 C36.0375,44.690625 39.01875,43.921875 41.475,41.45625 C43.93125,39 44.7,36.01875 44.86875,32.653125 C45.065625,29.184375 45.065625,18.796875 44.86875,15.328125 L44.86875,15.328125 Z M40.3875,36.375 C39.65625,38.2125 38.240625,39.628125 36.39375,40.36875 C33.628125,41.465625 27.065625,41.2125 24.009375,41.2125 C20.953125,41.2125 14.38125,41.45625 11.625,40.36875 C9.7875,39.6375 8.371875,38.221875 7.63125,36.375 C6.534375,33.609375 6.7875,27.046875 6.7875,23.990625 C6.7875,20.934375 6.54375,14.3625 7.63125,11.60625 C8.3625,9.76875 9.778125,8.353125 11.625,7.6125 C14.390625,6.515625 20.953125,6.76875 24.009375,6.76875 C27.065625,6.76875 33.6375,6.525 36.39375,7.6125 C38.23125,8.34375 39.646875,9.759375 40.3875,11.60625 C41.484375,14.371875 41.23125,20.934375 41.23125,23.990625 C41.23125,27.046875 41.484375,33.61875 40.3875,36.375 Z"
+                  ></path></svg></span
+            ></a>
+            <a
+              href="https://www.twitter.com/16Personalitiesofficial/"
+              class="sns_icon"
+              target="_blank"
+              rel="noreferrer"
+              ><span class="sns_icon"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  role="img"
+                  viewBox="0 0 48 48"
+                  aria-labelledby="tw"
+                >
+                  <title id="tw">Twitter</title>
+                  <path
+                    d="M43.0659375,14.223375 C43.0964062,14.64975 43.0964062,15.0762187 43.0964062,15.5025937 C43.0964062,28.5075937 33.198,43.4924062 15.1065937,43.4924062 C9.53296875,43.4924062 4.35534375,41.878125 0,39.0762187 C0.79190625,39.1675312 1.55325,39.198 2.375625,39.198 C6.97453125,39.198 11.2080937,37.64475 14.5888125,34.995 C10.2639375,34.9035937 6.6395625,32.071125 5.3908125,28.172625 C6,28.2639375 6.60909375,28.324875 7.24875,28.324875 C8.13196875,28.324875 9.01528125,28.203 9.8375625,27.9899062 C5.32996875,27.076125 1.94915625,23.1167812 1.94915625,18.3350625 L1.94915625,18.2132812 C3.25875,18.94425 4.78171875,19.4010937 6.3958125,19.4619375 C3.7460625,17.6954062 2.01009375,14.6802187 2.01009375,11.2690312 C2.01009375,9.44165625 2.4973125,7.76653125 3.35015625,6.30459375 C8.1928125,12.274125 15.4720313,16.1725312 23.634375,16.599 C23.482125,15.8680312 23.3907188,15.1066875 23.3907188,14.34525 C23.3907188,8.923875 27.7765312,4.5076875 33.2282813,4.5076875 C36.06075,4.5076875 38.6190937,5.6955 40.4160938,7.61428125 C42.639375,7.18790625 44.7713438,6.36553125 46.65975,5.23865625 C45.9286875,7.52296875 44.3754375,9.44175 42.334875,10.6599375 C44.3145938,10.4468437 46.233375,9.8985 47.9998125,9.13715625 C46.6599375,11.0863125 44.9847187,12.8222812 43.0659375,14.223375 Z"
+                  ></path></svg></span
+            ></a>
+          </div> -->
+          <div class="translation-alert">
+            <strong>Disclaimer</strong>
+            : All non-English versions of the website contain automated
+            translations or translations submitted by our users. They are not
+            binding in any way, are not guaranteed to be accurate, and have no
+            legal effect. The official text is the
+            <a href="#" class="with-border">English version</a>
+            of the website. Please consider reporting inaccuracies to
+            <a href="mailto:support@16personalities.com" class="with-border"
+              >support@16personalities.com</a
+            >
+            or join our
+            <a
+              href="https://www.16personalities.com/translations"
+              class="with-border"
+              >translation project</a
+            >!
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/public/js/survey4.js" type="text/javascript"></script>
+  </body>
+</html>
