@@ -45,7 +45,7 @@ const answer12 = document.querySelectorAll(
   ".q12 > #radioSelect > #options > div > input"
 );
 
-const nextBtn = document.querySelector(".nextBtn");
+const submitBtn = document.querySelector(".submitBtn");
 
 const arr1 = [];
 const arr2 = [];
@@ -59,6 +59,7 @@ const arr9 = [];
 const arr10 = [];
 const arr11 = [];
 const arr12 = [];
+
 function checkedHandler() {
   answer1.forEach((node1) => {
     if (node1.checked) {
@@ -124,16 +125,88 @@ function checkedHandler() {
 
   console.log(totalChecked);
 
-  function saveHandler() {
+  function divideHandler() {
     survey5.push(totalChecked);
 
-    const nowTotal = JSON.stringify(survey5);
-    localStorage.setItem("survey5", nowTotal);
+    let lastSurvey = survey5[survey5.length - 1];
 
+    let item1 = localStorage.getItem("survey1");
+    const survey1 = JSON.parse(item1);
+    let firstSurvey = survey1[survey1.length - 1];
+
+    let item2 = localStorage.getItem("survey2");
+    const survey2 = JSON.parse(item2);
+    let secondSurvey = survey2[survey2.length - 1];
+
+    let item3 = localStorage.getItem("survey3");
+    const survey3 = JSON.parse(item3);
+    let thirdSurvey = survey3[survey3.length - 1];
+
+    let item4 = localStorage.getItem("survey4");
+    const survey4 = JSON.parse(item4);
+    let forthSurvey = survey4[survey4.length - 1];
+
+    let totalSurvey =
+      firstSurvey + secondSurvey + thirdSurvey + forthSurvey + lastSurvey;
+    const mbti = [
+      "intj",
+      "intp",
+      "entj",
+      "entp",
+      "infj",
+      "infp",
+      "enfj",
+      "enfp",
+      "istj",
+      "isfj",
+      "estj",
+      "esfj",
+      "istp",
+      "isfp",
+      "estp",
+      "esfp",
+    ];
+
+    if (totalSurvey > 354) {
+      location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[0]}`;
+    } else if (totalSurvey > 334) {
+      location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[1]}`;
+    } else if (totalSurvey > 314) {
+      location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[2]}`;
+    } else if (totalSurvey > 294) {
+      location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[3]}`;
+    } else if (totalSurvey > 274) {
+      location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[4]}`;
+    } else if (totalSurvey > 254) {
+      location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[5]}`;
+    } else if (totalSurvey > 234) {
+      location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[6]}`;
+    } else if (totalSurvey > 214) {
+      location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[7]}`;
+    } else if (totalSurvey > 194) {
+      location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[8]}`;
+    } else if (totalSurvey > 174) {
+      location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[9]}`;
+    } else if (totalSurvey > 154) {
+      location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[10]}`;
+    } else if (totalSurvey > 134) {
+      location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[11]}`;
+    } else if (totalSurvey > 114) {
+      location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[12]}`;
+    } else if (totalSurvey > 85) {
+      location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[13]}`;
+    } else if (totalSurvey > 64) {
+      location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[14]}`;
+    } else {
+      location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[15]}`;
+    }
+
+    // const nowTotal = JSON.stringify(survey5);
+    // localStorage.setItem("survey5", nowTotal);
     // location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti}`;
   }
 
-  nextBtn.addEventListener("click", saveHandler);
+  submitBtn.addEventListener("click", divideHandler);
 }
 
 // 선택지 클릭시 아래로 scroll down
