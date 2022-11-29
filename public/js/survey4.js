@@ -184,7 +184,7 @@ function checkedHandler() {
   console.log(totalChecked);
 
   function saveHandler() {
-    survey1.push(totalChecked);
+    survey4.push(totalChecked);
 
     const nowTotal = JSON.stringify(survey4);
     localStorage.setItem("survey4", nowTotal);
