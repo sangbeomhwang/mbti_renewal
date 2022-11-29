@@ -53,10 +53,19 @@ a {
     position: relative;
 }
 
-#visual_wrap > #visual > a {
-    text-align: center;
-    color: #fff;
+#visual > #shadow {
+    background-color: #f9f9f9;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 95px;
+    bottom: 0;
+    box-shadow: none;
+    display: block;
+    opacity : 0.9;
+    z-index: 1;
 }
+
 #visual_wrap > #visual > h1 {
     margin: 35px 0px 15px;
     text-align: center;
@@ -87,6 +96,9 @@ a {
     font-size: 1.2em;
 }
 
+.tip > .text {
+    padding : 0 30px;
+}
 
 .tip > img {
     width:90px;
@@ -102,8 +114,4 @@ a {
 
 
 /* content */
-percentage box {
-    display: none;
-
-}
 
