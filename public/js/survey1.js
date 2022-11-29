@@ -14,15 +14,15 @@ function isChecked() {
 }
 */
 
-let item = localStorage.getItem("boards");
+let item = localStorage.getItem("survey1");
 if (item === null) {
   const initialState = [];
   const state = JSON.stringify(initialState);
-  localStorage.setItem("boards", state);
+  localStorage.setItem("survey1", state);
   item = state; // 바로 위의 코드까지만 수행하면 item이 "null"이 되므로 string 데이터로 형변환한 state 변수의 값을 넣어줌!!
 }
 
-const boards = JSON.parse(item);
+const survey1 = JSON.parse(item);
 
 const answer1 = document.querySelectorAll(
   ".q1 > #radioSelect > #options > div > input"
@@ -200,12 +200,25 @@ function checkedHandler() {
   console.log(totalChecked);
 
   function saveHandler() {
-    boards.push(totalChecked);
+    survey1.push(totalChecked);
 
-    const nowTotal = JSON.stringify(boards);
-    localStorage.setItem("boards", nowTotal);
-    location.href = `/mbti/survey2.html?total=${totalChecked}`;
+    const nowTotal = JSON.stringify(survey1);
+    localStorage.setItem("survey1", nowTotal);
+    // location.href = `/mbti/survey2.html?total=${totalChecked}`;
   }
 
   nextBtn.addEventListener("click", saveHandler);
+}
+
+// 선택지 클릭시 아래로 scroll down
+const selectBtnAll = document.querySelectorAll(
+  "#radioSelect > #options > div > input"
+);
+
+for (let i = 0; i < selectBtnAll.length; i++) {
+  selectBtnAll[i].addEventListener("click", function () {
+    setTimeout(function () {
+      window.scrollBy(0, 180);
+    }, 500);
+  });
 }
