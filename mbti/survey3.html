@@ -101,13 +101,13 @@
 
       <!-- a태그를 통한 사이트 특정 위치 앵커작업 -->
       <a name="nextButton"></a>
-  
+
       <!-- contents 영역 -->
       <div id="contents_wrap">
         <div id="contents">
           <div id="question">
             <ul id="statement">
-              <li class="q1">
+              <li id="q1" class="unchecked">
                 <p>다른 사람의 논쟁을 바라보는 일이 즐겁다.</p>
                 <div id="radioSelect">
                   <div class="agree">동의</div>
@@ -186,10 +186,8 @@
                   <div class="disagree">비동의</div>
                 </div>
               </li>
-              <li class="q2">
-                <p>
-                    다른 사람의 주의를 끌지 않으려고 하는 편이다.
-                </p>
+              <li id="q2" class="unchecked">
+                <p>다른 사람의 주의를 끌지 않으려고 하는 편이다.</p>
                 <div id="radioSelect">
                   <div class="agree">동의</div>
                   <div id="options">
@@ -267,10 +265,8 @@
                   <div class="disagree">비동의</div>
                 </div>
               </li>
-              <li class="q3">
-                <p>
-                    감정이 매우 빠르게 변하곤 한다.
-                </p>
+              <li id="q3" class="unchecked">
+                <p>감정이 매우 빠르게 변하곤 한다.</p>
                 <div id="radioSelect">
                   <div class="agree">동의</div>
                   <div id="options">
@@ -348,7 +344,7 @@
                   <div class="disagree">비동의</div>
                 </div>
               </li>
-              <li class="q4">
+              <li id="q4" class="unchecked">
                 <p>자신만큼 효율적이지 못한 사람을 보면 짜증이 난다.</p>
                 <div id="radioSelect">
                   <div class="agree">동의</div>
@@ -427,7 +423,7 @@
                   <div class="disagree">비동의</div>
                 </div>
               </li>
-              <li class="q5">
+              <li id="q5" class="unchecked">
                 <p>해야 할 일을 마지막까지 미룰 때가 많다.</p>
                 <div id="radioSelect">
                   <div class="agree">동의</div>
@@ -506,10 +502,8 @@
                   <div class="disagree">비동의</div>
                 </div>
               </li>
-              <li class="q6">
-                <p>
-                    사후세계에 대한 질문이 흥미롭다고 생각한다.
-                </p>
+              <li id="q6" class="unchecked">
+                <p>사후세계에 대한 질문이 흥미롭다고 생각한다.</p>
                 <div id="radioSelect">
                   <div class="agree">동의</div>
                   <div id="options">
@@ -587,10 +581,8 @@
                   <div class="disagree">비동의</div>
                 </div>
               </li>
-              <li class="q7">
-                <p>
-                    혼자보다는 다른 사람과 시간을 보내고 싶어한다.
-                </p>
+              <li id="q7" class="unchecked">
+                <p>혼자보다는 다른 사람과 시간을 보내고 싶어한다.</p>
                 <div id="radioSelect">
                   <div class="agree">동의</div>
                   <div id="options">
@@ -668,8 +660,11 @@
                   <div class="disagree">비동의</div>
                 </div>
               </li>
-              <li class="q8">
-                <p>이론 중심의 토론에는 관심이 없으며 원론적인 이야기는 지루하다고 생각한다.</p>
+              <li id="q8" class="unchecked">
+                <p>
+                  이론 중심의 토론에는 관심이 없으며 원론적인 이야기는
+                  지루하다고 생각한다.
+                </p>
                 <div id="radioSelect">
                   <div class="agree">동의</div>
                   <div id="options">
@@ -747,7 +742,7 @@
                   <div class="disagree">비동의</div>
                 </div>
               </li>
-              <li class="q9">
+              <li id="q9" class="unchecked">
                 <p>자신과 배경이 완전히 다른 사람에게도 쉽게 공감할 수 있다.</p>
                 <div id="radioSelect">
                   <div class="agree">동의</div>
@@ -826,7 +821,7 @@
                   <div class="disagree">비동의</div>
                 </div>
               </li>
-              <li class="q10">
+              <li id="q10" class="unchecked">
                 <p>결정을 내리는 일을 마지막까지 미루는 편이다.</p>
                 <div id="radioSelect">
                   <div class="agree">동의</div>
@@ -905,10 +900,8 @@
                   <div class="disagree">비동의</div>
                 </div>
               </li>
-              <li class="q11">
-                <p>
-                    이미 내린 결정에 대해서는 다시 생각하지 않는 편이다.
-                </p>
+              <li id="q11" class="unchecked">
+                <p>이미 내린 결정에 대해서는 다시 생각하지 않는 편이다.</p>
                 <div id="radioSelect">
                   <div class="agree">동의</div>
                   <div id="options">
@@ -986,9 +979,10 @@
                   <div class="disagree">비동의</div>
                 </div>
               </li>
-              <li class="q12">
+              <li id="q12" class="unchecked">
                 <p>
-                    혼자만의 시간을 보내기보다는 즐거운 파티와 행사로 일주일의 피로를 푸는 편이다.
+                  혼자만의 시간을 보내기보다는 즐거운 파티와 행사로 일주일의
+                  피로를 푸는 편이다.
                 </p>
                 <div id="radioSelect">
                   <div class="agree">동의</div>
@@ -1019,7 +1013,8 @@
                         name="survey12"
                         id="sel12-3"
                         value="5"
-                        onclick="checkedHandler(event)"/>
+                        onclick="checkedHandler(event)"
+                      />
                       <!-- <label for="sel12-3">✔️</label> -->
                     </div>
                     <div class="neutral">
@@ -1028,7 +1023,8 @@
                         name="survey12"
                         id="sel12-4"
                         value="4"
-                        onclick="checkedHandler(event)"/>
+                        onclick="checkedHandler(event)"
+                      />
                       <!-- <label for="sel12-4">✔️</label> -->
                     </div>
                     <div class="disagree low_disagree">
@@ -1037,7 +1033,8 @@
                         name="survey12"
                         id="sel12-5"
                         value="3"
-                        onclick="checkedHandler(event)"/>
+                        onclick="checkedHandler(event)"
+                      />
                       <!-- <label for="sel12-5">✔️</label> -->
                     </div>
                     <div class="disagree half_disagree">
@@ -1046,7 +1043,8 @@
                         name="survey12"
                         id="sel12-6"
                         value="2"
-                        onclick="checkedHandler(event)"/>
+                        onclick="checkedHandler(event)"
+                      />
                       <!-- <label for="sel12-6">✔️</label> -->
                     </div>
                     <div class="disagree high_disagree">
@@ -1055,7 +1053,8 @@
                         name="survey12"
                         id="sel12-7"
                         value="1"
-                        onclick="checkedHandler(event)"/>
+                        onclick="checkedHandler(event)"
+                      />
                       <!-- <label for="sel12-7">✔️</label> -->
                     </div>
                   </div>
@@ -1073,7 +1072,8 @@
                     xmlns="http://www.w3.org/2000/svg"
                     role="img"
                     viewBox="0 0 48 48"
-                    aria-labelledby="next_arrow">
+                    aria-labelledby="next_arrow"
+                  >
                     <title id="next_arrow">다음</title>
                     <path
                       data-v-339f1828=""
@@ -1195,4 +1195,3 @@
     <script src="/public/js/survey3.js" type="text/javascript"></script>
   </body>
 </html>
-
