@@ -12,6 +12,12 @@ a {
   text-decoration: none;
 }
 
+
+body {
+  padding-top: 90px;
+}
+
+
 #wrap {
   width: 100%;
 }
@@ -20,9 +26,18 @@ a {
 
 
 /* header */
+#header_wrap {
+  position :fixed;
+  text-align: center;
+  background-color: #fff;
+  width: 100%;
+  top:0;
+  left: 0;
+  right: 0;
+}
+
 #header {
   display: flex;
-  position : relative;
   justify-content: space-between;
   align-items: center;
   padding: 0 30px;
@@ -49,7 +64,6 @@ a {
 #visual {
   background: skyblue;
   padding : 25px 0px;
-  position: relative;
 }
 
 #visual_wrap > #visual > a {
@@ -59,12 +73,13 @@ a {
 #visual_wrap > #visual > h1 {
   margin: 35px 0px 15px;
   text-align: center;
+  font-weight: normal;
   color : #fff;
-  font-size: 4.1em;
+  font-size: 3.1em;
 }
 #mark {
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
   color: #fff;
 }
 
