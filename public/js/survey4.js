@@ -225,7 +225,7 @@ function checkedHandler() {
       const nowTotal = JSON.stringify(survey4);
       localStorage.setItem("survey4", nowTotal);
       document.querySelector("#next_question > a").href =
-        "/mbti/survey5.html#nextButton";
+        "/mbti/survey5.html#submitButton";
     }
   }
 
