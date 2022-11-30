@@ -29,6 +29,12 @@ a {
 
 }
 
+#mnt{
+    fill:#fff;
+    width: 100%;
+    height: auto;
+}
+
 #header > ul {
     display: flex;
     justify-content: center;
