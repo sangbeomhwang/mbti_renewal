@@ -39,25 +39,26 @@ a {
 
 /* visual */
 #visual {
-  background: skyblue;
+  position: relative;
+  background: #E9E8FB;
   padding: 25px 0px;
 }
 
 #visual_wrap > #visual > a {
   text-align: center;
-  color: #fff;
+  color: #666;
 }
 #visual_wrap > #visual > h1 {
   margin: 35px 0px 15px;
   text-align: center;
   font-weight: normal;
-  color: #fff;
+  color: #666;
   font-size: 3.1em;
 }
 #mark {
   text-align: center;
   font-size: 1.5em;
-  color: #fff;
+  color: #666;
 }
 
 #notice {
@@ -65,26 +66,100 @@ a {
   justify-content: center;
 }
 
-#notice > .tip {
-  padding: 20px 0px;
-  margin: 80px 10px 0px;
+#notice > #tips > .tip {
+  margin: 180px 10px 0px;
+  padding : 150px 0 0 0;
   width: 350px;
+  height: 80px;
   align-items: center;
   border-radius: 10px;
-  background: #eeeeee;
-  text-align: center;
   font-size: 1.2em;
+  box-sizing: border-box;
 }
 
-.tip > img {
+#first {
+  position: relative;
+}
+
+#second {
+  position: relative;
+}
+
+#third {
+  position: relative;
+}
+
+#notice > #tips > .tip:nth-child(1){
+  background-color: #AAF9B3;
+}
+
+#notice > #tips > .tip:nth-child(2){
+  background-color: #FED6F6;
+}
+
+#notice > #tips > .tip:nth-child(3){
+  background-color: #FDFBBB;
+}
+
+#visual > #imgs > img {
+  position: absolute;
   width: 90px;
   height: 90px;
   margin-bottom: 30px;
 }
 
-.tip > .title {
+#tips {
+  display: flex;
+  position: relative;
+  margin: 50px;
+}
+
+#tips > .tip > .text > .title {
+  padding: 0 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
   display: block;
 }
+
+.text {
+  left: -10px;
+  position:absolute;
+  padding: 0 10px;
+  bottom: 30px;
+  width: 100%;
+}
+
+#first_img {
+  top: 55%;
+  left: 21%;
+}
+
+#second_img {
+  top: 55%;
+  left: 47%;
+}
+
+#third_img {
+  top: 55%;
+  left: 73%;
+}
+
+#shape_wrap {
+  display: flex;
+  justify-content: center;
+}
+
+#shape {
+  position: absolute;
+  bottom: 150px;
+  background-color: #F7E5FB;
+  height: 150px;
+  width: 76%;
+  -webkit-clip-path: polygon(0 0,100% 0,100% calc(100% - 15px),81% 100%,46% calc(100% - 32px),19% 100%,0 calc(100% - 15px));
+}
+
+
 
 #contents_wrap {
   display: flex;
