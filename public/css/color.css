@@ -66,52 +66,41 @@ a {
   justify-content: center;
 }
 
+#notice > #tips {
+  display: flex;
+  position: relative;
+  margin: 50px;
+}
+
 #notice > #tips > .tip {
-  margin: 180px 10px 0px;
-  padding: 150px 0 0 0;
+  position: relative;
+  margin: 100px 10px 0 10px;
   width: 350px;
-  height: 80px;
+  height: 126px;
   align-items: center;
   border-radius: 10px;
   font-size: 1.2em;
   box-sizing: border-box;
 }
 
-#first {
-  position: relative;
-}
-
-#second {
-  position: relative;
-}
-
-#third {
-  position: relative;
-}
-
-#notice > #tips > .tip:nth-child(1) {
+#notice > #tips > #first {
   background-color: #aaf9b3;
 }
 
-#notice > #tips > .tip:nth-child(2) {
+#notice > #tips > #second {
   background-color: #fed6f6;
 }
 
-#notice > #tips > .tip:nth-child(3) {
+#notice > #tips > #third {
   background-color: #fdfbbb;
 }
 
-#visual > #imgs > img {
+#tips > .tip > .text {
+  left: -10px;
   position: absolute;
-  width: 90px;
-  height: 90px;
-  margin-bottom: 30px;
-}
-
-#tips {
-  display: flex;
-  position: relative;
-  margin: 50px;
+  padding: 0 10px;
+  bottom: 30px;
+  width: 100%;
 }
 
 #tips > .tip > .text > .title {
@@ -122,35 +111,14 @@ a {
   display: block;
 }
 
-.text {
-  left: -10px;
-  position: absolute;
-  padding: 0 10px;
-  bottom: 30px;
-  width: 100%;
-}
-
-#first_img {
-  top: 345px;
-  left: 340px;
-}
-
-#second_img {
-  top: 340px;
-  left: 700px;
-}
-
-#third_img {
-  top: 345px;
-  left: 1080px;
-}
-
 #shape_wrap {
   display: flex;
   justify-content: center;
 }
 
 #shape {
+  display: flex;
+  justify-content: space-around;
   position: absolute;
   bottom: 150px;
   background-color: #f7e5fb;
@@ -165,6 +133,27 @@ a {
     19% 100%,
     0 calc(100% - 15px)
   );
+}
+
+#shape > li {
+  margin-top: 10px;
+  width: 100px;
+  height: 100px;
+}
+
+#shape > #first_img {
+  background: url(https://static.neris-assets.com/images/test-header-1.svg)
+    no-repeat;
+}
+
+#shape > #second_img {
+  background: url(https://static.neris-assets.com/images/test-header-2.svg)
+    no-repeat;
+}
+
+#shape > #third_img {
+  background: url(https://static.neris-assets.com/images/test-header-3.svg)
+    no-repeat;
 }
 
 #progress {
