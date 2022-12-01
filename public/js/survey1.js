@@ -1,19 +1,3 @@
-/*
-function isChecked() {
-  const answer1 = document.querySelectorAll(
-    ".q1 > #radioSelect > #options > div > input"
-  );
-
-  console.log(answer1);
-
-  answer1.forEach((node) => {
-    if (node.checked) {
-      console.log(node.value);
-    }
-  });
-}
-*/
-
 let item = localStorage.getItem("survey1");
 if (item === null) {
   const initialState = [];

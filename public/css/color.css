@@ -195,6 +195,10 @@ a {
   box-sizing: border-box;
 }
 
+#contents > #question > ul > .unchecked {
+  opacity: 0.5;
+}
+
 #contents > #question > ul > li > p {
   color: #576071;
   font-size: 25px;
