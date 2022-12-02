@@ -1,4 +1,4 @@
-const survey1 = [0,0,0,0,0,0,0,0,0,0,0,0]
+const survey1 = []
 const answers = []
 
 // checked 되는 모든 버튼 엘리먼트 Array => answers
@@ -6,22 +6,36 @@ for(let i=0; i<12; i++){
   answers.push(document.querySelectorAll(`#q${i+1} > #radioSelect > #options > div> input`))
 }
 
-console.log(answers)
+const questions = document.querySelectorAll("#statement > li")
+
 
 function checkedHandler(e){
   target = e.target.id
-  console.log(target)
   index_l = target.indexOf('l')
   index_bar = target.indexOf('-')
   index_survey = target.slice(index_l+1,index_bar)
-  console.log(e.target.value)
   survey1[index_survey-1] = Number(e.target.value)
-  console.log(survey1)
+
+  if(questions.length > index_survey){
+    questions[index_survey].className = 'checked'
+  }
 }
 const nextBtn = document.querySelector(".nextBtn");
 
 
 function saveHandler(e){
+  for ( let j =0; j<answers.length; j++){
+    for(let i=0; i<answers[j].length; i++){
+      if(answers[j][i].checked){
+        survey1[j]=Number(answers[j][i].value)  
+        console.log(survey1)
+        break  
+      }
+      if(i===answers[j].length-1) survey1.push(0)
+      
+    }
+  }
+
   if (survey1.indexOf(0)!== -1){
     e.preventDefault();
     document.querySelector("#next_question > a").href = location.href;
