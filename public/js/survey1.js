@@ -326,3 +326,22 @@ window.onload = function () {
 
   showSliding();
 };
+
+// bottom image animation(scroll) 효과
+const bottomImgs = document.querySelectorAll("#bottom_imgs > li");
+
+function imageShow() {
+  for (let i = 0; i < bottomImgs.length; i++) {
+    if (window.scrollY > 3100) {
+      setTimeout(function () {
+        bottomImgs[i].style.opacity = "1";
+        bottomImgs[i].style.transition = "all 0.3s";
+      }, 400 * (i + (i + 1)));
+    } else if (window.scrollY < 2500) {
+      bottomImgs[i].style.opacity = "0";
+      bottomImgs[i].style.transition = "all 0.3s";
+    }
+  }
+}
+
+document.addEventListener("scroll", imageShow);
