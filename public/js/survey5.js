@@ -60,7 +60,6 @@ function submitHandler(e){
       sum = JSON.parse(localStorage.getItem(`survey${i+1}`))
       totalSurvey += sum[sum.length-1]
     }
-    alert(`totalSurvey = ${totalSurvey}`)
 
 
     const mbti = [
