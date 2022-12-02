@@ -1,9 +1,21 @@
 const survey3 = []
 const answers = []
 
+const count = document.querySelectorAll("#statement > li")
 // checked 되는 모든 버튼 엘리먼트 Array => answers
-for(let i=0; i<12; i++){
+for(let i=0; i<count.length; i++){
   answers.push(document.querySelectorAll(`#q${i+1} > #radioSelect > #options > div> input`))
+}
+
+for ( let j =0; j<answers.length; j++){
+  for(let i=0; i<answers[j].length; i++){
+    if(answers[j][i].checked){
+      survey3[j]=Number(answers[j][i].value)  
+      break  
+    }
+    if(i===answers[j].length-1) survey3.push(0)
+    
+  }
 }
 
 const questions = document.querySelectorAll("#statement > li")
@@ -15,7 +27,6 @@ function checkedHandler(e){
   index_bar = target.indexOf('-')
   index_survey = target.slice(index_l+1,index_bar)
   survey3[index_survey-1] = Number(e.target.value)
-
   if(questions.length > index_survey){
     questions[index_survey].className = 'checked'
   }
@@ -28,22 +39,20 @@ function saveHandler(e){
     for(let i=0; i<answers[j].length; i++){
       if(answers[j][i].checked){
         survey3[j]=Number(answers[j][i].value)  
-        console.log(survey3)
         break  
       }
-      if(i===answers[j].length-1) survey3.push(0)
       
     }
   }
 
   if (survey3.indexOf(0)!== -1){
     e.preventDefault();
-    document.querySelector("#next_question > a").href = location.href;
+    // document.querySelector("#next_question > a").href = location.href;
     const uncheckedElement = document.querySelector(`#q${survey3.indexOf(0)+1}`)
     uncheckedElement.scrollIntoView();
   }else{
     e.preventDefault()
-    survey3[survey3.length] = survey3.reduce((accumulator, current)=> accumulator + current, 0);
+    survey3[survey3.length] = survey3.reduce((a, b)=> a + b, 0)
     localStorage.setItem("survey3",JSON.stringify(survey3))
     location.href="/mbti/survey4.html#nextButton"
   }

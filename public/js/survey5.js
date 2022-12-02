@@ -1,140 +1,94 @@
-let item = localStorage.getItem("survey5");
-if (item === null) {
-  const initialState = [];
-  const state = JSON.stringify(initialState);
-  localStorage.setItem("survey5", state);
-  item = state; // 바로 위의 코드까지만 수행하면 item이 "null"이 되므로 string 데이터로 형변환한 state 변수의 값을 넣어줌!!
+const survey5 = []
+const answers = []
+
+
+const count = document.querySelectorAll("#statement > li")
+// checked 되는 모든 버튼 엘리먼트 Array => answers
+for(let i=0; i<count.length; i++){
+  answers.push(document.querySelectorAll(`#q${i+1} > #radioSelect > #options > div> input`))
 }
 
-const survey5 = JSON.parse(item);
-
-const answer1 = document.querySelectorAll(
-  ".q1 > #radioSelect > #options > div > input"
-);
-const answer2 = document.querySelectorAll(
-  ".q2 > #radioSelect > #options > div > input"
-);
-const answer3 = document.querySelectorAll(
-  ".q3 > #radioSelect > #options > div > input"
-);
-const answer4 = document.querySelectorAll(
-  ".q4 > #radioSelect > #options > div > input"
-);
-const answer5 = document.querySelectorAll(
-  ".q5 > #radioSelect > #options > div > input"
-);
-const answer6 = document.querySelectorAll(
-  ".q6 > #radioSelect > #options > div > input"
-);
-const answer7 = document.querySelectorAll(
-  ".q7 > #radioSelect > #options > div > input"
-);
-const answer8 = document.querySelectorAll(
-  ".q8 > #radioSelect > #options > div > input"
-);
-const answer9 = document.querySelectorAll(
-  ".q9 > #radioSelect > #options > div > input"
-);
-const answer10 = document.querySelectorAll(
-  ".q10 > #radioSelect > #options > div > input"
-);
-const answer11 = document.querySelectorAll(
-  ".q11 > #radioSelect > #options > div > input"
-);
-const answer12 = document.querySelectorAll(
-  ".q12 > #radioSelect > #options > div > input"
-);
-
-const nextBtn = document.querySelector(".nextBtn");
-
-const arr1 = [];
-const arr2 = [];
-const arr3 = [];
-const arr4 = [];
-const arr5 = [];
-const arr6 = [];
-const arr7 = [];
-const arr8 = [];
-const arr9 = [];
-const arr10 = [];
-const arr11 = [];
-const arr12 = [];
-function checkedHandler() {
-  answer1.forEach((node1) => {
-    if (node1.checked) {
-      arr1.push(node1.value);
-      if (arr1.length > 1) {
-        arr1.splice(0, 1);
-      }
+for ( let j =0; j<answers.length; j++){
+  for(let i=0; i<answers[j].length; i++){
+    if(answers[j][i].checked){
+      survey5[j]=Number(answers[j][i].value)  
+      break  
     }
-  });
+    if(i===answers[j].length-1) survey5.push(0)
+    
+  }
+}
 
-  answer2.forEach((node2) => {
-    if (node2.checked) {
-      arr2.push(node2.value);
-      if (arr2.length > 1) {
-        arr2.splice(0, 1);
-      }
+const questions = document.querySelectorAll("#statement > li")
+
+
+function checkedHandler(e){
+  target = e.target.id
+  index_l = target.indexOf('l')
+  index_bar = target.indexOf('-')
+  index_survey = target.slice(index_l+1,index_bar)
+  survey5[index_survey-1] = Number(e.target.value)
+
+  if(questions.length > index_survey){
+    questions[index_survey].className = 'checked'
+  }
+}
+
+
+const submitBtn = document.querySelector(".submitBtn");
+
+function submitHandler(e){
+  for ( let j =0; j<answers.length; j++){
+    for(let i=0; i<answers[j].length; i++){
+      if(answers[j][i].checked){
+        survey5[j]=Number(answers[j][i].value)  
+        break  
+      }      
     }
-  });
-
-  answer3.forEach((node3) => {
-    if (node3.checked) {
-      arr3.push(node3.value);
-      if (arr3.length > 1) {
-        arr3.splice(0, 1);
-      }
-    }
-  });
-
-  answer4.forEach((node4) => {
-    if (node4.checked) {
-      arr4.push(node4.value);
-      if (arr4.length > 1) {
-        arr4.splice(0, 1);
-      }
-    }
-  });
-
-  answer5.forEach((node5) => {
-    if (node5.checked) {
-      arr5.push(node5.value);
-      if (arr5.length > 1) {
-        arr5.splice(0, 1);
-      }
-    }
-  });
-
-  answer6.forEach((node6) => {
-    if (node6.checked) {
-      arr6.push(node6.value);
-      if (arr6.length > 1) {
-        arr6.splice(0, 1);
-      }
-    }
-  });
-
-  const totalChecked =
-    Number(arr1) +
-    Number(arr2) +
-    Number(arr3) +
-    Number(arr4) +
-    Number(arr5) +
-    Number(arr6);
-
-  console.log(totalChecked);
-
-  function saveHandler() {
-    survey5.push(totalChecked);
-
-    const nowTotal = JSON.stringify(survey5);
-    localStorage.setItem("survey5", nowTotal);
-
-    // location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti}`;
   }
 
-  nextBtn.addEventListener("click", saveHandler);
+  if (survey5.indexOf(0)!== -1){
+    e.preventDefault();
+    const uncheckedElement = document.querySelector(`#q${survey5.indexOf(0)+1}`)
+    uncheckedElement.scrollIntoView();
+  }else{
+    e.preventDefault()
+    survey5[survey5.length] = survey5.reduce((a, b)=> a + b, 0)
+
+    let totalSurvey = survey5[survey5.length-1]
+    for(let i = 0; i< 4; i++){
+      sum = JSON.parse(localStorage.getItem(`survey${i+1}`))
+      totalSurvey += sum[sum.length-1]
+    }
+    alert(`totalSurvey = ${totalSurvey}`)
+
+
+    const mbti = [
+      "esfp"
+      ,"estp"
+      ,"isfp"
+      ,"istp"
+      ,"esfj"
+      ,"estj"
+      ,"isfj"
+      ,"istj"
+      ,"enfp"
+      ,"enfj"
+      ,"infp"
+      ,"infj"
+      ,"entp"
+      ,"entj"
+      ,"intp"
+      ,"intj"
+    ];
+
+    location.href = `https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-${mbti[parseInt(totalSurvey-64)>0?parseInt((totalSurvey-64)/20):0]}`
+  }
+
+
 }
+
+submitBtn.addEventListener('click',submitHandler)
 
 // 선택지 클릭시 아래로 scroll down
 const selectBtnAll = document.querySelectorAll(
@@ -148,3 +102,4 @@ for (let i = 0; i < selectBtnAll.length; i++) {
     }, 500);
   });
 }
+
