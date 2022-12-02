@@ -156,6 +156,58 @@ a {
     no-repeat;
 }
 
+#slideSpace {
+  width: 100%;
+  margin: 50px 0;
+}
+
+#slidePart {
+  border: 3px solid #1e90ff;
+  width: 100%;
+  max-width: 250px;
+  height: 260px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#slidePart > #slideShow {
+  overflow: hidden;
+}
+
+#slidePart > #slideShow > .slides {
+  display: flex;
+  position: relative;
+  transition: 0.5s;
+}
+
+#slidePart > #slideShow > .slides > li > img {
+  width: 250px;
+  height: 260px;
+  vertical-align: top;
+}
+
+#slidePart > #slideShow > .controller > span {
+  cursor: pointer;
+  color: #fff;
+  background-color: #1e90ff;
+  width: 25px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+#slidePart > #slideShow > .controller > .prev {
+  position: absolute;
+  left: -50px;
+  top: 100px;
+}
+
+#slidePart > #slideShow > .controller > .next {
+  position: absolute;
+  right: -50px;
+  top: 100px;
+}
+
 #progress {
   display: flex;
   justify-content: center;
@@ -197,6 +249,14 @@ a {
 
 #contents > #question > ul > .unchecked {
   opacity: 0.5;
+}
+
+#contents > #question > ul > .unchecked:nth-child(1) {
+  opacity: 1;
+}
+
+#contents > #question > ul > .checked + li {
+  opacity: 1;
 }
 
 #contents > #question > ul > li > p {
@@ -901,6 +961,44 @@ a {
   line-height: 10px;
   cursor: pointer;
   margin-left: 10px;
+}
+
+#bottom_imgs {
+  width: 100%;
+  min-height: 1600px;
+  margin: 50px 0;
+  position: relative;
+}
+
+#bottom_imgs > li {
+  opacity: 0;
+}
+
+.bottomImg > img {
+  width: 1000px;
+  height: 400px;
+}
+
+#bottom_imgs > .left {
+  position: absolute;
+  left: 0;
+}
+
+#bottom_imgs > .img3 {
+  top: 800px;
+}
+
+#bottom_imgs > .right {
+  position: absolute;
+  right: 0;
+}
+
+#bottom_imgs > .img2 {
+  top: 400px;
+}
+
+#bottom_imgs > .img4 {
+  top: 1200px;
 }
 
 #footer_wrap {
